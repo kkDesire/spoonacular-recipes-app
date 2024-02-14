@@ -1,11 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   runtimeConfig: {
     spoonacular: {
       apiKey: '',
     }
   },
+
   $development: {
     nitro: {
       storage : {
@@ -15,5 +17,16 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+
+  image: {
+    providers: {
+      spoonacular: {
+        provider: '~/providers/spoonacular',
+      }
+    }
+  },
+
+  modules: ['@nuxt/ui', '@nuxt/image'],
+
 })

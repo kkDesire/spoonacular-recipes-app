@@ -8,6 +8,7 @@ const recipeShema = z.object({
     servings: z.number(),
     readyInMinutes: z.number(),
     sourceUrl: z.string(),
+    sourceName: z.string(),
     summary: z.string(),
     analyzedInstructions: z.array(z.object({
         name: z.string(),
