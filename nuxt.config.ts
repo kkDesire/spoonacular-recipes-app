@@ -8,6 +8,12 @@ export default defineNuxtConfig({
     }
   },
 
+  routeRules: {
+    '/**': {
+      // 1 day
+      isr: 60 * 60 * 24
+    }
+  },
   $development: {
     nitro: {
       storage : {
